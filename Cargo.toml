@@ -1,0 +1,17 @@
+[package]
+name = "clap"
+version = "0.1.0"
+edition = "2021"
+
+[[bin]]
+name = "clap"
+path = "src/main.rs"
+
+[dependencies]
+clap = { version = "=4.5.4", features = ["derive"] }
+uuid = { version = "=1.10.0", features = ["v4"] }
+anyhow = "1"
+
+[profile.release]
+opt-level = 3
+lto = true
